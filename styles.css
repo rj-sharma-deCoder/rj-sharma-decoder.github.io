@@ -1,0 +1,51 @@
+.title{
+    height:100vh;
+    background-color:aquamarine;
+}
+
+@media (min-width:768px){
+.title{
+    height:100vh;
+    background-image: url("https://suyati.com/blog/wp-content/uploads/2014/02/what-is-salesforce-crm-how-works-and-uses.jpg");
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-position:center;
+    background-attachment:scroll;
+}
+}
+
+.small-box{
+    min-height: 500px;
+    padding-top: 50px;
+}
+
+.page-box{
+    min-height: 384px;
+    padding-bottom: 25px;
+}
+
+img {
+    width: 75px; /* You can set the dimensions to whatever you want */
+    height: 75px;
+    object-fit:cover;
+}
+
+h5{
+    padding-top: 20px;
+}
+
+h3{
+    text-align: start;
+}
+
+@media (min-width:768px){
+    h3{
+        text-align:end
+    }
+}
+
+h6{
+    text-align:justify
+}
+
+
