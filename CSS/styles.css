@@ -54,6 +54,7 @@ a:hover{
     display:flex;
     align-items: center;
     justify-content: center;
+    transition: var(--transition-default);
 }
 
 #about{
@@ -64,6 +65,7 @@ a:hover{
     display:flex;
     flex-direction: column;
     justify-content: center;
+    
 }
 
 .img1{
@@ -86,6 +88,44 @@ h5{
     padding: 2rem;
     color: var(--color-primary);
 }
+
+h6{
+    text-align: justify;
+}
+
+.list-group-item{
+    cursor: pointer;
+}
+
+.list{
+    background-color: var(--color-grey-3);
+    color: #FFFFFF;
+}
+
+.list1{
+    background-color: var(--color-grey-4);
+    color: #FFFFFF;
+}
+
+.custom-popover {
+    --bs-popover-max-width: 300px;
+    --bs-popover-border-color: var(--color-grey-3);
+    --bs-popover-header-bg: var(--color-grey-4);
+    --bs-popover-header-color: var(--bs-white);
+    --bs-popover-body-padding-x: 1rem;
+    --bs-popover-body-padding-y: .5rem;
+    text-align: center;
+  }
+
+.custom-popover1 {
+    --bs-popover-max-width: 300px;
+    --bs-popover-border-color: var(--color-grey-3);
+    --bs-popover-header-bg: var(--color-grey-3);
+    --bs-popover-header-color: var(--bs-white);
+    --bs-popover-body-padding-x: 1rem;
+    --bs-popover-body-padding-y: .5rem;
+    text-align: center;
+  }  
 
 .section{
     transform: translateY(-100%) scale(0);
