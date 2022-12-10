@@ -1,51 +1,189 @@
-.title{
-    height:100vh;
-    background-color:aquamarine;
+*{
+    border: 0;
+    padding: 0;
+    list-style: none;
+    box-sizing: border-box;
 }
 
-@media (min-width:768px){
-.title{
-    height:100vh;
-    background-image: url("https://suyati.com/blog/wp-content/uploads/2014/02/what-is-salesforce-crm-how-works-and-uses.jpg");
-    background-repeat: no-repeat;
-    background-size:cover;
-    background-position:center;
-    background-attachment:scroll;
-}
-}
-
-.small-box{
-    min-height: 500px;
-    padding-top: 50px;
-}
-
-.page-box{
-    min-height: 384px;
-    padding-bottom: 25px;
+:root{
+    --color-primary: #191d2b;
+    --color-secondary: #27AE60;
+    --color-white: #FFFFFF;
+    --color-black: #000;
+    --color-grey0: #f8f8f8;
+    --color-grey-1: #dbe1e8;
+    --color-grey-2: #b2becd;
+    --color-grey-3: #6c7983;
+    --color-grey-4: #454e56;
+    --color-grey-5: #2a2e35;
+    --color-grey-6: #12181b;
+    --br-sm-2: 14px;
+    --transition-default: all .4s ease-in-out;
 }
 
-img {
-    width: 75px; /* You can set the dimensions to whatever you want */
+body{
+    background-color: var(--color-primary);
+    font-family: 'Roboto Mono', monospace;
+    color: var(--color-white);
+    transition: var(--transition-default);
+}
+
+a{
+    display: inline-block;
+    color: var(--color-white);
+    font-style: inherit;
+    text-decoration: none;
+}
+
+.nav-link{
+    color: var(--color-grey-2);
+    font-style: inherit;
+    text-decoration:none;
+}
+
+a:hover{
+    color: var(--color-white);
+}
+.nav-link:hover{
+    color: var(--color-white);
+}
+
+#home{
+    min-height:100vh;
+    width:100%;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    transition: var(--transition-default);
+}
+
+#about{
+    background-color: var(--color-white);
+    color:var(--color-primary);
+    min-height: 100vh;
+    width:100%;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    
+}
+
+.img1{
+    width: 75px;
     height: 75px;
     object-fit:cover;
 }
 
+.imgSelf{
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    image-rendering: crisp-edges;
+    clip-path: circle(50%);
+}
+
 h5{
     padding-top: 20px;
-}
-
-h3{
-    text-align: start;
-}
-
-@media (min-width:768px){
-    h3{
-        text-align:end
-    }
+    text-align: center;
+    padding: 2rem;
+    color: var(--color-primary);
 }
 
 h6{
-    text-align:justify
+    text-align: justify;
 }
 
+.list-group-item{
+    cursor: pointer;
+}
 
+.list{
+    background-color: var(--color-grey-3);
+    color: #FFFFFF;
+}
+
+.list1{
+    background-color: var(--color-grey-4);
+    color: #FFFFFF;
+}
+
+.custom-popover {
+    --bs-popover-max-width: 300px;
+    --bs-popover-border-color: var(--color-grey-3);
+    --bs-popover-header-bg: var(--color-grey-4);
+    --bs-popover-header-color: var(--bs-white);
+    --bs-popover-body-padding-x: 1rem;
+    --bs-popover-body-padding-y: .5rem;
+    text-align: center;
+  }
+
+.custom-popover1 {
+    --bs-popover-max-width: 300px;
+    --bs-popover-border-color: var(--color-grey-3);
+    --bs-popover-header-bg: var(--color-grey-3);
+    --bs-popover-header-color: var(--bs-white);
+    --bs-popover-body-padding-x: 1rem;
+    --bs-popover-body-padding-y: .5rem;
+    text-align: center;
+  }  
+
+.section{
+    transform: translateY(-100%) scale(0);
+    transition: var(--transition-default);
+    background-color: var(--color-primary);
+}
+
+.sec1{
+    transform: translateY(0) scale(1);
+    display: none;
+}
+
+.sec2{
+    transform: translateY(0) scale(1);
+    display: none;
+}
+
+.sec3{
+    transform: translateY(0) scale(1);
+    display: none;
+}
+
+.controls{
+    position:fixed;
+    display: flex;
+    flex-direction: column;
+    right:3%;
+    z-index: 10;
+    top:50%;
+    transform: translateY(-50%);
+    align-items: center;
+    justify-content: center;
+}
+
+.active-btn{
+    background-color: var(--color-secondary)!important;
+    transition: var(--transition-default);
+}
+
+.active-btn i{
+    color: var(--color-white);
+}
+
+.control{
+    padding:1rem;
+    cursor: pointer;
+    background-color: var(--color-grey-4);
+    width:40px;
+    height: 40px;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    margin: .7rem 0;
+}
+
+.control i{
+    font-size: 1.2rem;
+    color: var(--color-grey-2);
+    pointer-events: none;
+}
