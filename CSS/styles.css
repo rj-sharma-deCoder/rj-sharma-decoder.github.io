@@ -21,11 +21,20 @@
     --transition-default: all .4s ease-in-out;
 }
 
+@media screen and (max-width: 768px) {
+    html{
+        scroll-padding-top: 160px !important;
+    }
+  }
+
+
+
 body{
     background-color: var(--color-primary);
     font-family: 'Roboto Mono', monospace;
     color: var(--color-white);
     transition: var(--transition-default);
+    
 }
 
 a{
@@ -36,18 +45,25 @@ a{
 }
 
 .nav-link{
-    color: var(--color-grey-2);
+    color: var(--color-grey-2) !important;
     font-style: inherit;
     text-decoration:none;
 }
 
 a:hover{
-    color: var(--color-white);
+    color: var(--color-white) !important;
 }
 .nav-link:hover{
     color: var(--color-white);
 }
+.nav-link.active{
+    color:white !important;
+}
 
+.scrollspy-example{
+    scroll-padding-top: 100px !important;
+    
+}
 #home{
     min-height:100vh;
     width:100%;
@@ -61,11 +77,11 @@ a:hover{
     background-color: var(--color-white);
     color:var(--color-primary);
     min-height: 100vh;
-    width:100%;
+    width: 100%;
     display:flex;
     flex-direction: column;
+    transition: var(--transition-default);
     justify-content: center;
-    
 }
 
 .img1{
